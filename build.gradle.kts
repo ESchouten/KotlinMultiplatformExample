@@ -65,9 +65,9 @@ tasks.register<Copy>("MPBuild") {
 fun fixTS() {
     val packageJson = file("node/package.json")
     val pj = org.jetbrains.kotlin.js.parser.sourcemaps.parseJson(packageJson) as org.jetbrains.kotlin.js.parser.sourcemaps.JsonObject
-    pj.properties["name"] = org.jetbrains.kotlin.js.parser.sourcemaps.JsonString("@ESchouten/KotlinMultiplatformExample")
+    pj.properties["name"] = org.jetbrains.kotlin.js.parser.sourcemaps.JsonString("@ESchouten/kotlinmultiplatformexample")
     pj.properties["publishConfig"] = org.jetbrains.kotlin.js.parser.sourcemaps.JsonObject("registry" to org.jetbrains.kotlin.js.parser.sourcemaps.JsonString("https://npm.pkg.github.com/"))
-    pj.properties["repository"] = org.jetbrains.kotlin.js.parser.sourcemaps.JsonString("git://github.com/ESchouten/KotlinMultiplatformExample.git")
+    pj.properties["repository"] = org.jetbrains.kotlin.js.parser.sourcemaps.JsonString("git://github.com/ESchouten/kotlinmultiplatformexample.git")
     (pj.properties["dependencies"] as org.jetbrains.kotlin.js.parser.sourcemaps.JsonObject).apply {
         this.properties.remove("kotlin")
         this.properties.remove("kotlin-source-map-loader")
